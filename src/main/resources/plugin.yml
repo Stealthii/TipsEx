@@ -1,0 +1,11 @@
+author: Stealthii
+database: false
+description: Forked from the elusive and elegant plugin Tips by zydeco, TipsEx aims
+  to improve on simplicity and provide a more featureful and configurable tips plugin
+  whilst keeping what was right with the original - reliability.
+generator: http://dinnerbone.com/minecraft/tools/pluginator/
+main: net.stealthii.tipsex.TipsEx
+name: TipsEx
+startup: postworld
+url: http://stealthii.net/
+version: 1.0.2
