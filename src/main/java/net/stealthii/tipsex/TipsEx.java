@@ -6,6 +6,9 @@ import com.nijiko.permissions.PermissionHandler;
 
 import com.nijikokun.bukkit.Permissions.Permissions;
 
+import net.namedfork.bukkit.Tips.TipSet;
+import net.namedfork.bukkit.Tips.TipsCommand;
+
 import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
@@ -23,8 +26,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import net.namedfork.bukkit.Tips.TipSet;
-import net.namedfork.bukkit.Tips.TipsCommand;
 
 /**
  * TipsEx for Bukkit
@@ -39,7 +40,6 @@ public class TipsEx extends JavaPlugin {
     public void onDisable() {
 
         // TODO: Place any custom disable code here.
- 
     }
 
     public void onEnable() {
@@ -58,7 +58,7 @@ public class TipsEx extends JavaPlugin {
 
         PluginDescriptionFile pdfFile = this.getDescription();
 
-        logger.log(Level.INFO, "[Tips] version " + pdfFile.getVersion() + " enabled");
+        logger.log(Level.INFO, "[TipsEx] version " + pdfFile.getVersion() + " enabled");
     }
 
     // returns list of tip sets for a world, global sets if w == null or null on error
@@ -146,7 +146,7 @@ public class TipsEx extends JavaPlugin {
         msg = "Loaded " + ((worldTips == null)
                            ? 0
                            : worldTips.size()) + " global tip set(s)";
-        logger.log(Level.INFO, "[Tips] " + msg);
+        logger.log(Level.INFO, "[TipsEx] " + msg);
 
         if (sender instanceof Player) {
             sender.sendMessage(ChatColor.AQUA + msg);
@@ -165,7 +165,7 @@ public class TipsEx extends JavaPlugin {
             msg = "Loaded " + ((worldTips == null)
                                ? 0
                                : worldTips.size()) + " tip set(s) for world " + w.getName();
-            logger.log(Level.INFO, "[Tips] " + msg);
+            logger.log(Level.INFO, "[TipsEx] " + msg);
 
             if (sender instanceof Player) {
                 sender.sendMessage(ChatColor.AQUA + msg);
@@ -180,5 +180,4 @@ public class TipsEx extends JavaPlugin {
                     tipSet.getPeriod() * 60 * 20);
         }
     }
-
 }
