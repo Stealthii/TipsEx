@@ -37,5 +37,10 @@
             <artifactId>Permissions</artifactId>
             <version>3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.getspout</groupId>
+            <artifactId>spoutapi</artifactId>
+            <version>dev-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
